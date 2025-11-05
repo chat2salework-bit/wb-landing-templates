@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=480">
+
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="keywords" content="{{META_KEYWORDS}}">
+  <meta name="author" content="{{META_AUTHOR}}">
+
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="css/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="css/plugins/boxicons.min.css">
+  <link rel="stylesheet" href="css/plugins/magnific-popup.css">
+  <link rel="stylesheet" href="css/plugins/owl.carousel.css">
+  <link rel="stylesheet" href="css/plugins/loaders.css">
+  <link rel="stylesheet" href="css/plugins/animate.css">
+  <link rel="stylesheet" href="css/plugins/pickadate-default.css">
+  <link rel="stylesheet" href="css/plugins/pickadate-default.date.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/popup.css">
+  <link rel="stylesheet" href="menu/cookiestyle.css">
+  <link rel="stylesheet" href="menu/menustyle.css">
+
+  <!-- локальные правки -->
+  <style>
+    /* мелкие фиксы */
+    .description_section img{margin:0!important}
+    .order_steps2 .step_item .step_img{height:64px}
+
+    /* --- Заголовок: меньше и не обрезается --- */
+    .offer_section .main_title{
+      padding:12px 18px;
+      font-weight:700;
+      /* меньше, как на вашем втором скрине */
+      font-size:clamp(22px, 5.6vw, 32px);
+      line-height:1.25;
+      text-align:center;
+      word-break:break-word;
+      overflow-wrap:anywhere;
+    }
+    /* серый акцент вместо фиолетового */
+    .offer_section.offer3 .main_title{background:#7f8a93; color:#fff;}
+    .offer_section.offer3 .price_item.new{background:#7f8a93; color:#fff;}
+    .btn_wrapper{background:rgba(127,138,147,.28);}
+
+    /* --- «Живая» кнопка (анимация) --- */
+    .button.btn{
+      animation:jelly 2.2s ease-in-out infinite;
+      transform-origin:center;
+    }
+    .button.btn:hover{animation-duration:1.6s}
+    @keyframes jelly{
+      0%,100%{transform:scale(1)}
+      25%{transform:scale(1.04,.96) translateY(-2px)}
+      45%{transform:scale(.98,1.02)}
+      65%{transform:scale(1.02,.98)}
+      85%{transform:scale(1)}
+    }
+    @media (prefers-reduced-motion: reduce){ .button.btn{animation:none} }
+
+    /* --- Картинки во всю ширину блока --- */
+    .description_section .image{
+      display:block;
+      width:100%;
+      height:auto;
+      margin:0 0 30px;
+    }
+    .sales_full{padding:0}
+    .sales_full .image{border-radius:0}
+
+    /* --- Стрелки в отзывах: видимые и по центру изображения --- */
+    .reviews2_section .reviews_list{position:relative}
+    .reviews2_section .owl-nav button.owl-prev,
+    .reviews2_section .owl-nav button.owl-next{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:44px;height:44px;
+      border:none;border-radius:50%;
+      background:#9aa0a6;              /* серый */
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer;
+      box-shadow:0 4px 14px rgba(0,0,0,.15);
+      z-index:5;
+    }
+    .reviews2_section .owl-nav button.owl-prev{left:10px}
+    .reviews2_section .owl-nav button.owl-next{right:10px}
+    .reviews2_section .owl-nav button span{
+      display:block; line-height:1; font-size:26px; color:#fff; font-weight:700;
+    }
+    .reviews2_section .owl-nav button:hover{background:#7f8a93}
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#main-navbar">
+<div class="main-container" id="page">
+
+  <!-- HERO TITLE -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <header class="offer_section offer3">
+        <h1 class="main_title">{{MAIN_TITLE}}</h1>
+      </header>
+    </div>
+  </div>
+
+  <!-- HERO IMAGE + DISCOUNT -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <div class="offer_section offer3">
+        <div class="info_block">
+          <div class="discount editContent"><b>{{DISCOUNT}} скидка</b></div>
+          <img class="image" src="{{IMG1}}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICE STRIP -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <div class="offer_section offer3">
+        <div class="price_block">
+          <div class="price_item old bg-edit">
+            <div class="text editContent">Обычная цена:</div>
+            <div class="value editContent">{{OLD_PRICE}} {{CURRENCY}}</div>
+          </div>
+          <div class="price_item new bg-edit">
+            <div class="text editContent">Цена сегодня:</div>
+            <div class="value editContent"><x-newprice>{{NEW_PRICE}}</x-newprice> {{CURRENCY}}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- rating anchor -->
+      <section class="description_section">
+        <a href="#rewiew_form"><img class="image" src="images/uploads/rating.png" alt="Рейтинг"></a>
+      </section>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <div class="offer_section offer3">
+        <div class="btn_wrapper bg-edit">
+          <a href="#order_form" class="button btn">{{CTA_TEXT}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STOCK LEFT -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <div class="offer_section offer3">
+        <div class="products_count editContent">Осталось <b>{{STOCK_LEFT}}</b>&nbsp;штук по акции</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEDIA (опционально) -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      {{MEDIA_BLOCK}}
+    </div>
+  </div>
+
+  <!-- ОПИСАНИЕ -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <div class="description_section">
+        <h2 class="title"><span class="text-edit">ОПИСАНИЕ</span></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="description_section"><div class="editContent">{{DESC_INTRO_HTML}}</div></section>
+    </div>
+  </div>
+
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="description_section"><img class="image" src="{{IMG2}}" alt=""></section>
+    </div>
+  </div>
+
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="description_section"><div class="editContent">{{DESC_MID1_HTML}}</div></section>
+    </div>
+  </div>
+
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="description_section"><img class="image" src="{{IMG3}}" alt=""></section>
+    </div>
+  </div>
+
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="description_section"><div class="editContent">{{DESC_MID2_HTML}}</div></section>
+    </div>
+  </div>
+
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="description_section"><img class="image" src="{{IMG4}}" alt=""></section>
+    </div>
+  </div>
+
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="description_section"><div class="editContent">{{DESC_MID3_HTML}}</div></section>
+    </div>
+  </div>
+
+  <!-- ХАРАКТЕРИСТИКИ -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <div class="description_section">
+        <h2 class="title"><span class="text-edit">ХАРАКТЕРИСТИКИ</span></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="description_section">
+        <ul class="list2 marker2">{{CHAR_LIST_HTML}}</ul>
+      </section>
+    </div>
+  </div>
+
+  <!-- ещё фото -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="description_section"><img class="image" src="{{IMG5}}" alt=""></section>
+    </div>
+  </div>
+
+  <!-- ОТЗЫВЫ -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <div class="description_section">
+        <h2 class="title" id="rewiew_form"><span class="text-edit">ОТЗЫВЫ</span> НАШИХ ПОКУПАТЕЛЕЙ</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="reviews2_section bg-edit" id="otz">
+        <div id="reviews_list" class="reviews_list owl-carousel">
+          <div class="review_item">
+            <img class="image" src="{{REVIMG1}}" alt="">
+            <p>{{REVTEXT1}}</p>
+            <div class="author_block"><div class="author_info"><div class="name editContent">{{REVAUTHOR1}}</div></div></div>
+          </div>
+          <div class="review_item">
+            <img class="image" src="{{REVIMG2}}" alt="">
+            <p>{{REVTEXT2}}</p>
+            <div class="author_block"><div class="author_info"><div class="name editContent">{{REVAUTHOR2}}</div></div></div>
+          </div>
+          <div class="review_item">
+            <img class="image" src="{{REVIMG3}}" alt="">
+            <p>{{REVTEXT3}}</p>
+            <div class="author_block"><div class="author_info"><div class="name editContent">{{REVAUTHOR3}}</div></div></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- КАК СДЕЛАТЬ ЗАКАЗ -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <div class="description_section">
+        <h2 class="title"><span class="text-edit">КАК</span> СДЕЛАТЬ ЗАКАЗ?</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="order_steps_section bg-edit">
+        <div class="order_steps2 clearfix bg-edit">
+          <div class="step_item">
+            <div class="step_img bg-edit"><i class="bx bx-pencil"></i></div>
+            <h4>Заявка</h4>
+            <div class="separator"></div>
+            <p>Оставляете заявку на сайте</p>
+          </div>
+          <div class="step_item">
+            <div class="step_img bg-edit"><i class="bx bx-phone-call"></i></div>
+            <h4>Звонок</h4>
+            <div class="separator"></div>
+            <p>Наш менеджер уточняет детали заказа</p>
+          </div>
+          <div class="step_item">
+            <div class="step_img bg-edit"><i class="bx bx-send"></i></div>
+            <h4>Отправка</h4>
+            <div class="separator"></div>
+            <p>Доставляем ваш товар в течение 1–3 дней</p>
+          </div>
+          <div class="step_item">
+            <div class="step_img bg-edit"><i class="bx bx-wallet"></i></div>
+            <h4>Получение</h4>
+            <div class="separator"></div>
+            <p>Оплачиваете при получении на почте</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- SALES BANNER — на всю ширину -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="description_section sales_full">
+        <img class="image" src="{{SALES_IMAGE}}" alt="">
+      </section>
+    </div>
+  </div>
+
+  <!-- REPEAT HERO + FEATURES -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <header class="offer_section offer3">
+        <h1 class="main_title">{{MAIN_TITLE}}</h1>
+      </header>
+    </div>
+  </div>
+
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <div class="offer_section offer3">
+        <div class="info_block">
+          <div class="discount editContent"><b>{{DISCOUNT}} скидка</b></div>
+          <img class="image" src="{{IMG1}}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <div class="offer_section offer3">
+        <div class="price_block">
+          <div class="price_item old bg-edit">
+            <div class="text editContent">Обычная цена:</div>
+            <div class="value editContent">{{OLD_PRICE}} {{CURRENCY}}</div>
+          </div>
+          <div class="price_item new bg-edit">
+            <div class="text editContent">Цена сегодня:</div>
+            <div class="value editContent"><x-newprice>{{NEW_PRICE}}</x-newprice> {{CURRENCY}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Кружки преимуществ -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="offer_section offer3">
+        <div class="benefits_block clearfix">
+          <div class="benefit_item">
+            <img src="{{FEATIMG1}}" style="border-radius:100px" alt="">
+            <p><b>{{FEATTEXT1}}</b></p>
+          </div>
+          <div class="benefit_item">
+            <img src="{{FEATIMG2}}" style="border-radius:100px" alt="">
+            <p><b>{{FEATTEXT2}}</b></p>
+          </div>
+          <div class="benefit_item">
+            <img src="{{FEATIMG3}}" style="border-radius:100px" alt="">
+            <p><b>{{FEATTEXT3}}</b></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- STOCK LEFT (повтор) -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <div class="offer_section offer3">
+        <div class="products_count editContent">Осталось <b>{{STOCK_LEFT}}</b>&nbsp;штук по акции</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORDER FORM -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <section class="offer_section offer3 order">
+        <form id="order_form" class="order_form" action="private/send.php" method="post">
+          <input class="field" type="text" name="name" placeholder="Введите Ваше имя" required>
+          <input class="field" type="tel" name="phone" placeholder="Телефон, пример: +37529-111-11-11" required>
+
+          <input type="hidden" name="elapsed" value="0">
+          <div id="cf-turnstile-widget"></div>
+
+          <label class="lb_b">
+            <input type="checkbox" checked required>
+            Я согласен с политикой конфиденциальности и
+            <a href="private/soglashenie.html">пользовательским соглашением</a>
+          </label>
+
+          <div class="btn_wrapper bg-edit">
+            <button class="button btn editContent" type="submit">{{ORDER_BUTTON_TEXT}}</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="main_wrapper body-bg-edit">
+    <div class="content">
+      <footer class="footer_section">
+        <div>
+          <p style="text-align:center;">
+            {{ORG_NAME}}<br>
+            УНП {{UNP}}<br>
+            Адрес: {{ORG_ADDRESS}}<br>
+            {{BANK_DETAILS}}
+          </p>
+          <br>
+          <p style="text-align:center;">E-mail: {{ORG_EMAIL}}</p>
+          <br>
+          <p style="text-align:center;">
+            <p><a href="private/politics.html" style="text-decoration:underline;">Политика конфиденциальности</a></p>
+            <p><a href="private/warranty.html" style="text-decoration:underline;">Правила возврата и обмена товара</a></p>
+            <p><a href="private/delivery.html" style="text-decoration:underline;">Условия доставки</a></p>
+          </p>
+          <p style="text-align:center;">(c) {{COPY_YEAR}}</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+</div><!-- /main-container -->
+
+<!-- scripts -->
+<script src="js/plugins/jquery1.11.2.min.js"></script>
+<script src="js/plugins/bootstrap.min.js"></script>
+<script src="js/plugins/jquery.easing.1.3.min.js"></script>
+<script src="js/plugins/jquery.countTo.js"></script>
+<script src="js/plugins/jquery.formchimp.min.js"></script>
+<script src="js/plugins/jquery.jCounter-0.1.4.js"></script>
+<script src="js/plugins/jquery.magnific-popup.min.js"></script>
+<script src="js/plugins/jquery.vide.min.js"></script>
+<script src="js/plugins/owl.carousel.js"></script>
+<script src="js/plugins/twitterFetcher_min.js"></script>
+<script src="js/plugins/wow.min.js"></script>
+<script src="js/plugins/picker.js"></script>
+<script src="js/plugins/picker.date.js"></script>
+<script src="js/custom_skeleton.js"></script>
+<script src="js/popup.js"></script>
+
+<!-- инициализация карусели отзывов со стрелками -->
+<script>
+  $(function(){
+    $('#reviews_list').owlCarousel({
+      items:1,
+      loop:true,
+      margin:0,
+      nav:true,               // включаем стрелки
+      dots:true,
+      navText:['&#8249;','&#8250;'], // реальные символы стрелок
+      smartSpeed:450,
+      autoHeight:true
+    });
+  });
+</script>
+
+<!-- фикс дубликатов лидов + анти-вставка телефона, тайминг и turnstile -->
+<script>
+  function notify(){ try{ fbq && fbq('track','Lead'); }catch(e){} }
+  $(function(){
+    $('form').on('submit', function(e){
+      if($(this).hasClass('submited')){ e.preventDefault(); return false; }
+      $(this).addClass('submited'); notify();
+    });
+    $('input').on('paste', function(e){ e.preventDefault(); });
+  });
+  document.addEventListener('DOMContentLoaded', function(){
+    var form=document.getElementById('order_form'); if(!form) return;
+    var startTs=Date.now(); var elapsed=form.querySelector('input[name="elapsed"]');
+    form.addEventListener('submit', function(){ if(elapsed) elapsed.value=String(Date.now()-startTs); });
+  });
+  (function(){
+    var form=document.getElementById('order_form'); if(!form) return;
+    window.onloadTurnstileCallback=function(){
+      if(!window.turnstile) return;
+      turnstile.render('#cf-turnstile-widget',{sitekey:'0x4AAAAAABqlajaI_wMyPdp5', size:'invisible'});
+    };
+  })();
+</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
+
+<!-- формат и валидация телефона BY -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const phoneInput = document.querySelector('input[name="phone"]');
+  const form = document.getElementById('order_form');
+  if(!phoneInput || !form) return;
+
+  phoneInput.addEventListener('input', function(){
+    let v=this.value.replace(/\D/g,'');
+    if(v.startsWith('80') && v.length===11) this.value=v;
+    else if(v.startsWith('375') && v.length===12) this.value='+'+v;
+    else if(/^(29|25|33|44)/.test(v) && v.length===9) this.value='+375'+v;
+  });
+
+  form.addEventListener('submit', function(e){
+    const d=phoneInput.value.replace(/\D/g,'');
+    const ok=['29','25','33','44'];
+    if((d.startsWith('375')&&d.length===12&&ok.includes(d.substring(3,5)))||
+       (d.startsWith('80') &&d.length===11&&ok.includes(d.substring(2,4)))) return true;
+    if(d.length===9 && ok.includes(d.substring(0,2))){ phoneInput.value='+375'+d; return true; }
+    alert('Введите номер в формате: +375 29 123 45 67 или 8029 123 45 67');
+    e.preventDefault(); return false;
+  });
+});
+</script>
+
+<!-- запоминаем последний заказ в localStorage -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const form=document.querySelector('form'); if(!form) return;
+  form.addEventListener('submit', function(){
+    localStorage.setItem('lastOrderName', form.querySelector('input[name="name"]')?.value||'');
+    localStorage.setItem('lastOrderPhone', form.querySelector('input[name="phone"]')?.value||'');
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+    "errors": [
+        {
+            "message": "Company is expired",
+            "extensions": {
+                "category": "HTTP",
+                "code": "COMPANY_EXPIRED"
+            }
+        }
+    ]
+}
+2025-04-02 23:06:03 {"input":{"offerId":1,"cart":{"items":[{"itemId":3,"quantity":1,"variation":1}]},"data":{"phone_1":"231321","humanName_1":{"firstName":"test","lastName":""}},"source":{"refererUri":"https://ynimag.online/kolesiki-mebelnye-povorotnye-samokleyashhiesya/","ip":"37.214.67.205","utm_source":"","utm_campaign":"","utm_medium":"","utm_term":"","utm_content":""}}}
+2025-04-02 23:06:03 {
+    "errors": [
+        {
+            "message": "Company is expired",
+            "extensions": {
+                "category": "HTTP",
+                "code": "COMPANY_EXPIRED"
+            }
+        }
+    ]
+}
+2025-04-03 16:38:35 {"input":{"offerId":1,"cart":{"items":[{"itemId":3,"quantity":1,"variation":1}]},"data":{"phone_1":"123123","humanName_1":{"firstName":"итест","lastName":""}},"source":{"refererUri":"https://ynimag.online/kolesiki-mebelnye-povorotnye-samokleyashhiesya/","ip":"185.203.152.154","utm_source":"","utm_campaign":"","utm_medium":"","utm_term":"","utm_content":""}}}
+2025-04-03 16:38:35 {
+    "errors": [
+        {
+            "message": "Company is expired",
+            "extensions": {
+                "category": "HTTP",
+                "code": "COMPANY_EXPIRED"
+            }
+        }
+    ]
+}
+2025-04-03 16:40:06 {"input":{"statusId":1,"projectId":1,"orderData":{"humanNameFields":[{"field":"name","value":{"firstName":"итест","lastName":""}}],"phoneFields":[{"field":"phone","value":"123123"}]},"source":{"refererUri":"https://ynimag.online/kolesiki-mebelnye-povorotnye-samokleyashhiesya/","ip":"185.203.152.154","utm_source":"","utm_campaign":"","utm_medium":"","utm_term":"","utm_content":""},"cart":{"items":[{"itemId":3,"quantity":1,"variation":1,"price":0}]}}}
+2025-04-03 16:40:06 {
+    "errors": [
+        {
+            "message": "Company is expired",
+            "extensions": {
+                "category": "HTTP",
+                "code": "COMPANY_EXPIRED"
+            }
+        }
+    ]
+}
+2025-04-04 07:57:00 {"input":{"statusId":1,"projectId":1,"orderData":{"humanNameFields":[{"field":"name","value":{"firstName":"Людмила","lastName":""}}],"phoneFields":[{"field":"phone","value":"259573005"}]},"source":{"refererUri":"https://ynimag.online/kolesiki-mebelnye-povorotnye-samokleyashhiesya/?ttclid=E_C_P_Cs8BTY1QccbeJycXsaeMz8XWC6-pxegAszK1S5LL3tGZPbLuISgYAhiKHQXaXOsNmO7QFEsRg6fwOGuNvLUrJBdvJ7Nzp5msepbiKltJt2FxMdPu2MEhY5OXhBXw3R5yKmxsoUwynD-K8kMnNhejtwr98Q5VKWVTh5nENiTnE2AEE_s1IhoynW8yJr_c_yBCYjO2RnKXih611tH0OeSFRhMEouy9h9lDO6DO4rDpvfW9of0FYm_k8yQ3dcT6f4DhkWqtP-Fvud5l_eOY9_vAojV2EgR2Mi4w","ip":"109.126.148.246","utm_source":"","utm_campaign":"","utm_medium":"","utm_term":"","utm_content":""},"cart":{"items":[{"itemId":3,"quantity":1,"variation":1,"price":0}]}}}
+2025-04-04 07:57:00 {
+    "errors": [
+        {
+            "message": "Company is expired",
+            "extensions": {
+                "category": "HTTP",
+                "code": "COMPANY_EXPIRED"
+            }
+        }
+    ]
+}
+2025-04-05 03:02:01 {"input":{"statusId":1,"projectId":1,"orderData":{"humanNameFields":[{"field":"name","value":{"firstName":"t4st","lastName":""}}],"phoneFields":[{"field":"phone","value":"wr545345345"}]},"source":{"refererUri":"https://ynimag.online/tyapka-dlya-propolki/","ip":"37.214.58.65","utm_source":"","utm_campaign":"","utm_medium":"","utm_term":"","utm_content":""},"cart":{"items":[{"itemId":3,"quantity":1,"variation":1,"price":0}]}}}
+2025-04-05 03:02:01 {
+    "errors": [
+        {
+            "message": "Company is expired",
+            "extensions": {
+                "category": "HTTP",
+                "code": "COMPANY_EXPIRED"
+            }
+        }
+    ]
+}

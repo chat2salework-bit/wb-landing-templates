@@ -1,0 +1,872 @@
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Ubuntu:wght@500&display=swap);
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15
+}
+
+body {
+    margin: 0
+}
+
+main {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+img {
+    border-style: none
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+[hidden],
+template {
+    display: none
+}
+
+body {
+    font-family: Manrope, sans-serif
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1209px;
+    padding: 0 15px
+}
+
+.main {
+    padding-bottom: 133px;
+    padding-top: 100px
+}
+
+.main,
+.main-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.main-check {
+    margin-bottom: 56px
+}
+
+.main-title {
+    color: #000;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 100%;
+    margin-bottom: 44px;
+    text-align: center
+}
+
+.main-texts {
+    margin-bottom: 134px
+}
+
+.main-text {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 130%
+}
+
+.main-form-title,
+.main-text {
+    color: #000;
+    margin-bottom: 44px;
+    text-align: center
+}
+
+.main-form-title {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 100%
+}
+
+.main-form-inputs {
+    grid-column-gap: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px
+}
+
+.main-form-input {
+    background: #dbdbdb;
+    border: none;
+    border-radius: 8px;
+    color: #9a9a9a;
+    font-size: 24px;
+    font-weight: 400;
+    height: 76px;
+    line-height: 100%;
+    max-width: 308px;
+    max-width: 277px;
+    outline: none;
+    padding-left: 26px
+}
+
+.main-form-input::placeholder {
+    color: #9a9a9a
+}
+
+.main-form-input--house,
+.main-form-input--kv {
+    max-width: 135px
+}
+
+.main-form-button {
+    align-items: center;
+    background: #b71b1b;
+    border: none;
+    border-radius: 86px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 28px;
+    font-weight: 500;
+    height: 90px;
+    justify-content: center;
+    line-height: 100%;
+    margin: 0 auto;
+    outline: none;
+    width: 388px
+}
+
+.others-title {
+    color: #000;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 130px;
+    text-align: center
+}
+
+.others-blocks {
+    grid-row-gap: 148px;
+    grid-column-gap: 50px;
+    display: grid;
+    grid-auto-rows: 606px;
+    grid-template-columns: repeat(3, 314px);
+    justify-content: space-between;
+    margin: 0 auto;
+    width: fit-content
+}
+
+.others-block {
+    position: relative
+}
+
+.others-block-img {
+    margin-bottom: 15px
+}
+
+.others-block-title {
+    color: #000;
+    font-family: Ubuntu;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 15px
+}
+
+.others-block-prices {
+    grid-column-gap: 18px;
+    align-items: center;
+    bottom: 43px;
+    display: flex;
+    margin-bottom: 30px;
+    position: absolute
+}
+
+.others-block-prices-new {
+    color: #000;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 100%
+}
+
+.others-block-prices-old {
+    color: #b4b4b4;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 100%;
+    text-decoration-line: line-through
+}
+
+.others-block-button {
+    background: #b71b1b;
+    border: none;
+    border-radius: 86px;
+    bottom: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    height: 52px;
+    left: 0;
+    line-height: 100%;
+    margin: 0 auto;
+    outline: none;
+    position: absolute;
+    right: 0;
+    width: 292px
+}
+
+.subscribe {
+    padding-bottom: 123px;
+    padding-top: 91px
+}
+
+.subscribe-title {
+    color: #000;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 58px;
+    text-align: center
+}
+
+.subscribe-links {
+    grid-column-gap: 60px;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    width: fit-content
+}
+
+.subscribe-link {
+    grid-column-gap: 35px;
+    align-items: center;
+    background: #d9d9d9;
+    border-radius: 142px;
+    display: flex;
+    height: 92px;
+    justify-content: center;
+    text-decoration: none;
+    width: 285px
+}
+
+.subscribe-link__text {
+    color: #1b1b1b;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 120%
+}
+
+.overlay {
+    background: hsla(0, 0%, 100%, .7);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 20
+}
+
+.modal,
+.overlay {
+    display: none;
+    position: fixed
+}
+
+.modal {
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 21
+}
+
+.modal-wrapper {
+    padding: 61px 79px 103px
+}
+
+.modal-title {
+    color: #373737;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 4px
+}
+
+.modal-subtitle,
+.modal-title {
+    font-weight: 300;
+    text-align: center
+}
+
+.modal-subtitle {
+    color: #180f0f;
+    font-size: 16px;
+    line-height: 100%;
+    margin-bottom: 73px
+}
+
+.modal-inputs {
+    grid-row-gap: 18px;
+    margin-bottom: 77px
+}
+
+.modal-block,
+.modal-inputs {
+    display: flex;
+    flex-direction: column
+}
+
+.modal-block {
+    grid-row-gap: 5px
+}
+
+.modal-block__label {
+    color: #373737
+}
+
+.modal-block__input,
+.modal-block__label {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 100%
+}
+
+.modal-block__input {
+    background: #fff;
+    border-radius: 7px;
+    color: #000;
+    height: 51px;
+    outline: none;
+    padding-left: 25px
+}
+
+.modal-button {
+    background: #b71b1b;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 0 #d51f1f;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    height: 85px;
+    line-height: 23px;
+    margin: 0 auto;
+    outline: none;
+    text-transform: uppercase;
+    width: 369px
+}
+
+.modal.active,
+.overlay.active {
+    display: block
+}
+
+@media(max-width:1380px) {
+    .main {
+        padding-bottom: 76px;
+        padding-top: 132px
+    }
+
+    .main-title {
+        font-size: 36px;
+        margin-bottom: 18px
+    }
+
+    .main-texts {
+        margin-bottom: 34px
+    }
+
+    .main-text {
+        font-size: 26px;
+        margin-bottom: 16px
+    }
+
+    .main-form-title {
+        font-size: 36px;
+        margin-bottom: 28px
+    }
+
+    .main-form-inputs {
+        grid-column-gap: 15px
+    }
+
+    .main-form-input {
+        font-size: 19px;
+        height: 55px;
+        max-width: 157px;
+        padding-left: 15px
+    }
+
+    .main-form-input--house,
+    .main-form-input--kv {
+        max-width: 106px
+    }
+
+    .main-form-button {
+        font-size: 22px;
+        height: 68px;
+        width: 323px
+    }
+
+    .others-title {
+        font-size: 36px;
+        margin-bottom: 39px
+    }
+
+    .others-blocks {
+        grid-row-gap: 49px;
+        grid-auto-rows: 430px;
+        grid-template-columns: repeat(3, 225px)
+    }
+
+    .others-block-img {
+        margin-bottom: 8px;
+        width: 100%
+    }
+
+    .others-block-title {
+        font-size: 15px
+    }
+
+    .others-block-prices {
+        bottom: 24px
+    }
+
+    .others-block-prices-new {
+        font-size: 16px
+    }
+
+    .others-block-prices-old {
+        font-size: 15px
+    }
+
+    .others-block-button {
+        font-size: 12px;
+        height: 39px;
+        width: 201px
+    }
+
+    .subscribe-title {
+        font-size: 32px;
+        margin-bottom: 40px
+    }
+
+    .subscribe-link {
+        grid-column-gap: 18px;
+        height: 54px;
+        width: 169px
+    }
+
+    .subscribe-link__icon {
+        width: 21px
+    }
+
+    .subscribe-link__text {
+        font-size: 14px
+    }
+}
+
+@media(max-width:880px) {
+    .main-check {
+        margin-bottom: 34px;
+        width: 98px
+    }
+
+    .main-title {
+        font-size: 26px;
+        margin-bottom: 18px
+    }
+
+    .main-texts {
+        margin-bottom: 34px
+    }
+
+    .main-text {
+        font-size: 16px;
+        margin-bottom: 16px
+    }
+
+    .main-form-title {
+        font-size: 26px;
+        margin: 0 auto 28px;
+        max-width: 264px
+    }
+
+    .main-form-inputs {
+        grid-row-gap: 15px;
+        grid-column-gap: 15px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-bottom: 28px
+    }
+
+    .main-form-input {
+        font-size: 14px;
+        height: 43px;
+        max-width: 157px
+    }
+
+    .main-form-input--house,
+    .main-form-input--kv {
+        max-width: 77px
+    }
+
+    .main-form-button {
+        font-size: 16px;
+        height: 54px;
+        width: 275px
+    }
+
+    .others-title {
+        font-size: 26px
+    }
+
+    .others-blocks {
+        grid-auto-rows: 306px;
+        grid-template-columns: repeat(2, 156px)
+    }
+
+    .others-block-title {
+        font-size: 11px
+    }
+
+    .others-block-button {
+        border-radius: 43px;
+        font-size: 9px;
+        height: 26px;
+        width: 148px
+    }
+
+    .others-block-prices {
+        grid-column-gap: 10px;
+        bottom: 6px
+    }
+
+    .others-block-prices-new {
+        font-size: 12px
+    }
+
+    .others-block-prices-old {
+        font-size: 10px
+    }
+
+    .modal-wrapper {
+        padding: 20px 30px
+    }
+
+    .modal-title {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 2px
+    }
+
+    .modal-subtitle {
+        font-size: 15px;
+        line-height: 100%;
+        margin-bottom: 20px
+    }
+
+    .modal-inputs {
+        grid-row-gap: 10px;
+        margin-bottom: 20px
+    }
+
+    .modal-block__label {
+        font-size: 13px
+    }
+
+    .modal-block__input {
+        font-size: 13px;
+        height: 30px
+    }
+
+    .modal-button {
+        font-size: 13px;
+        font-weight: 700;
+        height: 50px;
+        line-height: 23px;
+        margin: 0 auto;
+        outline: none;
+        text-transform: uppercase;
+        width: 254px
+    }
+}
+
+@media(max-width:570px) {
+    .subscribe-title {
+        font-size: 22px;
+        margin-bottom: 40px
+    }
+}
+
+@media(max-width:430px) {
+    .main {
+        padding-top: 64px
+    }
+
+    .main-check {
+        margin-bottom: 27px;
+        width: 79.51px
+    }
+
+    .main-title {
+        font-size: 20px;
+        margin-bottom: 16px
+    }
+
+    .main-texts {
+        margin-bottom: 28px
+    }
+
+    .main-text {
+        font-size: 12px;
+        margin-bottom: 16px
+    }
+
+    .main-form-inputs {
+        grid-row-gap: 12px;
+        grid-column-gap: 12px;
+        margin-bottom: 22px
+    }
+
+    .main-form-title {
+        font-size: 20px;
+        margin: 0 auto 28px;
+        max-width: 216px
+    }
+
+    .main-form-input {
+        border-radius: 4.05648px;
+        font-size: 11px;
+        height: 34.89px;
+        max-width: 123px;
+        padding-left: 12px
+    }
+
+    .main-form-input--house,
+    .main-form-input--kv {
+        max-width: 62px
+    }
+
+    .main-form-button {
+        font-size: 12px;
+        height: 40px;
+        width: 208px
+    }
+
+    .others-title {
+        font-size: 20px
+    }
+
+    .others-blocks {
+        grid-row-gap: 41px;
+        grid-auto-rows: 250px;
+        grid-template-columns: repeat(2, 130px)
+    }
+
+    .others-block-img {
+        margin-bottom: 7px
+    }
+
+    .others-block-title {
+        font-size: 9px;
+        line-height: 130%
+    }
+
+    .others-block-button {
+        font-size: 7px;
+        height: 21px;
+        width: 121px
+    }
+
+    .others-block-prices {
+        grid-column-gap: 7px;
+        bottom: 27px;
+        margin: 0
+    }
+
+    .others-block-prices-new {
+        font-size: 10px;
+        line-height: 100%
+    }
+
+    .others-block-prices-old {
+        font-size: 8px;
+        line-height: 100%
+    }
+
+    .subscribe {
+        padding-bottom: 52px
+    }
+
+    .subscribe-title {
+        font-size: 18px;
+        margin-bottom: 35px
+    }
+
+    .subscribe-links {
+        grid-row-gap: 17px;
+        flex-direction: column
+    }
+}
+
+@media(max-width:350px) {
+    .others-blocks {
+        grid-column-gap: unset;
+        display: grid;
+        justify-content: space-between;
+        width: 100%
+    }
+}
